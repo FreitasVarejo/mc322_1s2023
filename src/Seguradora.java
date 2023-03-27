@@ -7,10 +7,10 @@ public class Seguradora {
     //Construtor
 
     public Seguradora ( String nome , String telefone , String email , String endereco ) {
-        this . nome = nome ;
-        this . telefone = telefone ;
-        this . email = email ;
-        this . endereco = endereco ;
+        this.nome = nome ;
+        this.telefone = telefone ;
+        this.email = email ;
+        this.endereco = endereco ;
     }
 
     // Getters e setters
@@ -32,19 +32,19 @@ public class Seguradora {
     }
 
     public void setNome ( String nome ) {
-        this . nome = nome ;
+        this.nome = nome ;
     }
     
     public void setTelefone ( String telefone ) {
-        this . telefone = telefone ;
+        this.telefone = telefone ;
     }
 
     public void setEmail ( String email ) {
-        this . email = email ;
+        this.email = email ;
     }
 
     public void setEndereco ( String endereco ) {
-        this . endereco = endereco ;
+        this.endereco = endereco ;
     }
 
 }
