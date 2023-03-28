@@ -1,5 +1,3 @@
-//import java.util.Scanner;
-
 public class MainClass{
     public static void main(String[] args){
         // Testando classe cliente 
@@ -18,48 +16,22 @@ public class MainClass{
             System.out.println("CPF INVÀLIDO");
         }
 
-        System.out.print("ANTIGO CPF = ");
-        System.out.println(cliente_1.getCpf());
-
+        System.out.println("ANTIGO CPF = "+cliente_1.getCpf());
         cliente_1.setCpf("803.504.303-06");
+        System.out.println("NOVO CPF = "+cliente_1.getCpf()+"\n");
 
-        System.out.print("NOVO CPF = ");
-        System.out.println(cliente_1.getCpf());
-        
-        System.out.println("");
         // Testando classe seguradora
 
         Seguradora seguradora_1 = new Seguradora( 
             "Segur a dora" , 
             "(085) 95392-4234" , 
-            "gokusupersaiajindeusupersyajin@gmail.com" , 
-            "Rua dos Amigos N100" );
+            "gokusupersayajindeusupersayajin@gmail.com" , 
+            "Rua dos Amigos 123" );
         
-        System.out.print("ANTIGO EMAIL = ");
-        System.out.println(seguradora_1.getEmail());
-
+        System.out.println("ANTIGO EMAIL = "+seguradora_1.getEmail());
         seguradora_1.setEmail("segur_a_dora@gmail.com");
+        System.out.println("NOVO EMAIL = "+seguradora_1.getEmail()+'\n');
 
-        System.out.print("NOVO EMAIL = ");
-        System.out.println(seguradora_1.getEmail());
-
-        System.out.println("");
-        // Testando classe sinistro
-
-        Sinistro sinistro_1 = new Sinistro(
-            "01/01/2023", 
-            "Rua Shiego Mori 123" );
-        
-        System.out.print("ANTIGO ENDEREÇO = ");
-        System.out.println(sinistro_1.getEndereco());
-
-        sinistro_1.setEndereco("Rua dos Bobos 100");
-
-        System.out.print("NOVO ENDEREÇO = ");
-        System.out.println(sinistro_1.getEndereco());
-
-
-        System.out.println("");
         // Testando classe Veículo
 
         Veiculo veiculo_1 = new Veiculo( 
@@ -67,13 +39,28 @@ public class MainClass{
             "Uno" , 
             "1995");
         
-        System.out.print("ANTIGA PLACA = ");
-        System.out.println(veiculo_1.getPlaca());
-
+        System.out.println("ANTIGA PLACA = " +veiculo_1.getPlaca());
         veiculo_1.setPlaca("KQN-2643");
+        System.out.println("NOVA PLACA = "+veiculo_1.getPlaca()+'\n');
 
-        System.out.print("NOVA PLACA = ");
-        System.out.println(veiculo_1.getPlaca());
+        // Testando classe sinistro
+
+        Sinistro sinistro_1 = new Sinistro(
+            "01/01/2023", 
+            "Rua Shiego Mori 123" );
+        
+        System.out.println("ANTIGO ENDEREÇO = "+sinistro_1.getEndereco());
+
+        sinistro_1.setEndereco("Rua dos Bobos 100");
+
+        System.out.println("NOVO ENDEREÇO = " + sinistro_1.getEndereco()+"\n");
+
+        for(int i = 1; 5 >= i; ++i){
+            System.out.println("ID DO " + i+  "-ÈSIMO SINISTRO : "+sinistro_1.getId());
+            sinistro_1 = new Sinistro(
+            "01/01/2023", 
+            "Rua Shiego Mori 123" );
+        }
 
     }
 

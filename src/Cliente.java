@@ -1,5 +1,3 @@
-//import java.util.Scanner;
-
 public class Cliente {
     private String nome ;
     private String cpf ;
@@ -8,21 +6,6 @@ public class Cliente {
     private String endereco ;
 
     //Construtor
-
-    /*
-    public Cliente Inicializar(){
-        System.out.printIn("Insira as informações do cliente: \n");
-        System.out.printIn("NOME: ");
-        String nome = in.nextLine();
-        System.out.printIn("\nCPF: ");
-        String cpf = in.nextLine();
-        System.out.printIn("\nDATA DE NASCIMENTO: ");
-        String dataNascimento = in.nextLine();
-        System.out.printIn("\nIDADE: ");
-        int idade = in.nextInt();
-        System.out.printIn("\nENDEREÇO: ");
-        String endereco = = in.nextLine();
-        */
     
     public Cliente ( String nome , String cpf , String dataNascimento , int idade, String endereco ) {
         this . nome = nome ;
@@ -35,19 +18,24 @@ public class Cliente {
     // Checkar cpf
 
     public boolean validarCPF(){
+        // Retiro todos os caracteres não unitários
         String newcpf = cpf.replaceAll("[^0-9]", "");
 
+        // Confiro se há 11 dígitos
         if(newcpf.length() != 11){
             return false;
         }
 
-        boolean checkar_tudo_igual = true;
+        // Confiro se todos os dígitos não são iguais
 
+        boolean checkar_tudo_igual = true;
         for(int i = 1; newcpf.length() > i; ++i){
             checkar_tudo_igual &= (newcpf.charAt(0)==newcpf.charAt(i)); 
         }
 
         if(checkar_tudo_igual) return false;
+
+        // Testo a validade dos últimos dois dígitos do cpf
 
         int digito1 = 0, digito2 = 0;
 
@@ -68,9 +56,10 @@ public class Cliente {
 
     }
 
-    // 
+    // Função toString
 
     public String toString(){
+        // Concateno as várias linhas em uma string vazia
         String retornar = "\n";
         retornar += "NOME: " + nome + "\n";
         retornar += "CPF: " + cpf + "\n";
