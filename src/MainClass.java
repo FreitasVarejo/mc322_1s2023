@@ -50,11 +50,10 @@ public class MainClass{
             "Rua Shiego Mori 123" );
         
         System.out.println("ANTIGO ENDEREÇO = "+sinistro_1.getEndereco());
-
         sinistro_1.setEndereco("Rua dos Bobos 100");
-
         System.out.println("NOVO ENDEREÇO = " + sinistro_1.getEndereco()+"\n");
-
+        
+        // texto a assimilação de id para cada novo sinistro
         for(int i = 1; 5 >= i; ++i){
             System.out.println("ID DO " + i+  "-ÈSIMO SINISTRO : "+sinistro_1.getId());
             sinistro_1 = new Sinistro(
