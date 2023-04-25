@@ -3,11 +3,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-/*import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.time.LocalDate;*/
-
 public class MainClass {
     //Scanner global que abro e fecho na main
     static Scanner scanner = new Scanner(System.in);
