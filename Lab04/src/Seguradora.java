@@ -319,8 +319,6 @@ public class Seguradora {
         }
 
 
-        System.out.println(k + " * " + resposta);
-
         return k*resposta;
     }
 

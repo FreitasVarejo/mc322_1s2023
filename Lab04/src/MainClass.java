@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class MainClass {
     //Scanner global que abro e fecho na main
     static Scanner scanner = new Scanner(System.in);
+    //Lista de seguradoras que uso na função toda
     static ArrayList <Seguradora> seguradoras = new ArrayList<>();
 
     public static boolean inserirSeguradora() {
